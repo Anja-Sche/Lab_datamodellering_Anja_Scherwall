@@ -9,3 +9,12 @@ Entiteter an vara t.ex. ett objekt, en person eller en plats. Den koseptuella mo
 
 Här kan du se de konseptuella modellerna för YrkesCO: [Konseptuell modell](modeller/konseptuell_modell.md)
 
+
+## Logisk modell
+När den första modellen har en stark grund och beställaren har godkänt kan man gå vidare till den logiska modellen. Denna kommer utvecklas med fler entiteter, attribut och relationer för att få fram mer information som ska finnas i databasen. 
+
+Attribut för entiteten Student kan vara namn och klass, sådan information som är kopplad till den entiteten. Här lägger man också till primära nycklar och främmande nycklar. De används för att koppla ihop olika entiteter och gör det enklare att minska ner antalet rade i datan som kommer ligga i databasen. 
+
+????
+
+Här kan du se de konseptuella modellerna för YrkesCO: [Konseptuell modell](modeller/logisk_modell.md)
