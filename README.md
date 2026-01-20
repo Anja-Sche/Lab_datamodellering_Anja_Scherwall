@@ -28,3 +28,9 @@ Här kan du se denfysiska modellen för YrkesCO: [Fysisk modell](modeller/fysisk
 
 Se även: [Kod fysisk modell](modeller/fysisk_modell.dbml)
 
+<div style="margin-bottom: 3em;"></div>
+
+## Normala former
+Denna databas uppnår kraven för tredje normalformen som efterfrågats. Alla attribut i entitterna är beroende av den primära nyckeln, De har unika namn inom entiteterna och upprepar inte information i onödan. 
+
+Läs mer om normalformer och hur denna databas uppfyller dessa krav här: [Normalformer](Normalformer.md)
