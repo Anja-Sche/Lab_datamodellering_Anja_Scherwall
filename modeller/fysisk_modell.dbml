@@ -3,9 +3,7 @@ Table Student_Info {
   student_id INTEGER [not null, ref: > Student.student_id]
   email VARCHAR(255) [not null]
   phone_nr VARCHAR(15) [not null]
-  address VARCHAR(100) [not null]
-  zip_code CHAR(5) [not null]
-  city VARCHAR(20) [not null]
+  address_id INTEGER [not null, ref: > Address.address_id]
   social_security CHAR(12) [not null]
 }
 
@@ -45,7 +43,11 @@ Table Facility {
 Table Address {
   address_id INTEGER [primary key]
   address VARCHAR(100) [not null]
-  zip_code CHAR(5) [not null]
+  postcode INTEGER [not null, ref: > Postcode.postcode]
+}
+
+Table Postcode {
+  postcode INTEGER [primary key]
   city VARCHAR(20) [not null]
 }
 
@@ -62,9 +64,7 @@ Table Permanent_Hire_Info {
   prog_manager_id INTEGER [ref: > Program_Manager.prog_manager_id]
   email VARCHAR(255) [not null]
   phone_nr VARCHAR(15) [not null]
-  address VARCHAR(100) [not null]
-  zip_code CHAR(5) [not null]
-  city VARCHAR(20) [not null]
+  address_id INTEGER [not null, ref: > Address.address_id]
   social_security CHAR(12) [not null]
   salary DECIMAL(10, 2) [not null]
   employment_date DATE [not null]
@@ -97,7 +97,7 @@ Table Consulting_Company {
   organization_nr INTEGER [primary key]
   company VARCHAR [not null]
   f_tax BOOL [not null]
-  address VARCHAR(100) [not null]
+  address_id INTEGER [not null, ref: > Address.address_id]
 }
 
 Table Consultant_Info {
@@ -105,9 +105,7 @@ Table Consultant_Info {
   consultant_id INTEGER [not null, ref: > Consultant.consultant_id]
   email VARCHAR(255) [not null]
   phone_nr VARCHAR(15) [not null]
-  address VARCHAR(100) [not null]
-  zip_code CHAR(5) [not null]
-  city VARCHAR(20) [not null]
+  address_id INTEGER [not null, ref: > Address.address_id]
   social_security CHAR(12) [not null]
   hourly_fee DECIMAL(8, 2) [not null]
   employment_date DATE [not null]
@@ -126,6 +124,10 @@ Table Course {
   description VARCHAR(1500) [not null]
 }
 
+Table Course_Class {
+  course_code VARCHAR(10) [not null, ref: > Course.course_code]
+  class_id INTEGER [not null, ref: > Class.class_id]
+}
 Table Course_Class {
   course_code VARCHAR(10) [not null, ref: > Course.course_code]
   class_id INTEGER [not null, ref: > Class.class_id]
