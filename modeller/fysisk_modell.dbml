@@ -1,0 +1,132 @@
+Table Student_Info {
+  stud_info_id INTEGER [primary key]
+  student_id INTEGER [not null, ref: > Student.student_id]
+  email VARCHAR(255) [not null]
+  phone_nr VARCHAR(15) [not null]
+  address VARCHAR(100) [not null]
+  zip_code CHAR(5) [not null]
+  city VARCHAR(20) [not null]
+  social_security CHAR(12) [not null]
+}
+
+Table Student {
+  student_id VARCHAR() [primary key]
+  first_name VARCHAR(50)  [not null]
+  last_name VARCHAR(50)  [not null]
+  class_id INTEGER [not null, ref: > Class.class_id]
+  student_email VARCHAR(255) [not null]
+}
+
+Table Class {
+  class_id INTEGER [primary key]
+  program VARCHAR(5) [ref: > Program.program, note: "This can be null if the Class is not in a program, freestanding"]
+  start_date DATE [not null]
+  facility_id INTEGER [not null, ref: > Facility.facility_id]
+}
+
+Table Program {
+  program VARCHAR(5) [primary key]
+  program_name VARCHAR(55) [not null]
+  points INTEGER [not null]
+}
+
+Table Program_Facility {
+  program VARCHAR(5) [not null, ref: > Program.program]
+  prog_manager_id INTEGER [not null, ref: > Program_Manager.prog_manager_id]
+  facility_id INTEGER [not null, ref: > Facility.facility_id]
+}
+
+Table Facility {
+  facility_id INTEGER [primary key]
+  name VARCHAR(30) [not null]
+  address_id INTEGER [not null, ref: > Address.address_id]
+}
+
+Table Address {
+  address_id INTEGER [primary key]
+  address VARCHAR(100) [not null]
+  zip_code CHAR(5) [not null]
+  city VARCHAR(20) [not null]
+}
+
+Table Program_Manager {
+  prog_manager_id INTEGER [primary key]
+  first_name VARCHAR(50) [not null]
+  last_name VARCHAR(50)  [not null]
+  work_email VARCHAR(255) [not null]
+}
+
+Table Permanent_Hire_Info {
+  perm_hire_info_id INTEGER [primary key]
+  permanent_ed_id INTEGER [ref: > Permanent_Educator.permanent_ed_id]
+  prog_manager_id INTEGER [ref: > Program_Manager.prog_manager_id]
+  email VARCHAR(255) [not null]
+  phone_nr VARCHAR(15) [not null]
+  address VARCHAR(100) [not null]
+  zip_code CHAR(5) [not null]
+  city VARCHAR(20) [not null]
+  social_security CHAR(12) [not null]
+  salary DECIMAL(10, 2) [not null]
+  employment_date DATE [not null]
+}
+
+Table Permanent_Educator {
+  permanent_ed_id INTEGER [primary key]
+  first_name VARCHAR(50) [not null]
+  last_name VARCHAR(50)  [not null]
+  work_email VARCHAR(255) [not null]
+}
+
+Table Educator {
+  educator_id INTEGER [primary key]
+  permanent_ed_id INTEGER [ref: > Permanent_Educator.permanent_ed_id]
+  prog_manager_id INTEGER [ref: > Program_Manager.prog_manager_id]
+  consultant_id INTEGER [ref: > Consultant.consultant_id]
+  note:"These can be null to show what the educator only have one employment type"
+}
+
+Table Consultant {
+  consultant_id INTEGER [primary key]
+  organizaton_nr CHAR(10) [not null, ref: > Consulting_Company.organization_nr]
+  first_name VARCHAR(50) [not null]
+  last_name VARCHAR(50)  [not null]
+  work_email VARCHAR(255) [not null]
+}
+
+Table Consulting_Company {
+  organization_nr INTEGER [primary key]
+  company VARCHAR [not null]
+  f_tax BOOL [not null]
+  address VARCHAR(100) [not null]
+}
+
+Table Consultant_Info {
+  consultant_info_id INTEGER [primary key]
+  consultant_id INTEGER [not null, ref: > Consultant.consultant_id]
+  email VARCHAR(255) [not null]
+  phone_nr VARCHAR(15) [not null]
+  address VARCHAR(100) [not null]
+  zip_code CHAR(5) [not null]
+  city VARCHAR(20) [not null]
+  social_security CHAR(12) [not null]
+  hourly_fee DECIMAL(8, 2) [not null]
+  employment_date DATE [not null]
+}
+
+Table Educator_Course {
+  educator_id INTEGER [not null, ref: > Educator.educator_id]
+  course_code VARCHAR(10) [not null, ref: > Course.course_code]
+}
+
+Table Course {
+  course_code VARCHAR(10) [primary key]
+  name VARCHAR(80) [not null]
+  points INTEGER [not null]
+  freestanding BOOL [not null]
+  description VARCHAR(1500) [not null]
+}
+
+Table Course_Class {
+  course_code VARCHAR(10) [not null, ref: > Course.course_code]
+  class_id INTEGER [not null, ref: > Class.class_id]
+}
