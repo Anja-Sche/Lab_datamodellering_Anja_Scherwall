@@ -1,4 +1,4 @@
-# Relatione (relationship statements)
+# Relationer (relationship statements)
 
 Relationer mellan entiteter i den konseptuella modellen:
 

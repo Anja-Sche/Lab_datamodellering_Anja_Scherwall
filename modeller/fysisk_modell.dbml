@@ -48,7 +48,12 @@ Table Address {
 
 Table Postcode {
   postcode INTEGER [primary key]
-  city VARCHAR(20) [not null]
+  city_id INTEGER [not null, ref: > City.city_id]
+}
+
+Table City {
+  city_id INTEGER [primary key]
+  city_name VARCHAR(20) [not null]
 }
 
 Table Program_Manager {
@@ -120,14 +125,10 @@ Table Course {
   course_code VARCHAR(10) [primary key]
   name VARCHAR(80) [not null]
   points INTEGER [not null]
-  freestanding BOOL [not null]
+  freestanding BOOL [not null, default: FALSE, NOTE: "Default false då övervägande kurser ingår i ett pogram"]
   description VARCHAR(1500) [not null]
 }
 
-Table Course_Class {
-  course_code VARCHAR(10) [not null, ref: > Course.course_code]
-  class_id INTEGER [not null, ref: > Class.class_id]
-}
 Table Course_Class {
   course_code VARCHAR(10) [not null, ref: > Course.course_code]
   class_id INTEGER [not null, ref: > Class.class_id]
