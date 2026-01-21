@@ -99,9 +99,9 @@ Table Consultant {
 }
 
 Table Consulting_Company {
-  organization_nr INTEGER [primary key]
-  company VARCHAR [not null]
-  f_tax BOOL [not null]
+  organization_nr CHAR(10) [primary key]
+  company VARCHAR(100) [not null]
+  f_tax BOOLEAN [not null]
   address_id INTEGER [not null, ref: > Address.address_id]
 }
 
@@ -123,9 +123,9 @@ Table Educator_Course {
 
 Table Course {
   course_code VARCHAR(10) [primary key]
-  name VARCHAR(80) [not null]
+  name VARCHAR(100) [not null]
   points INTEGER [not null]
-  freestanding BOOL [not null, default: FALSE, NOTE: "Default false då övervägande kurser ingår i ett pogram"]
+  freestanding BOOLEAN [not null, default: FALSE, NOTE: "Default false då övervägande kurser ingår i ett pogram"]
   description VARCHAR(1500) [not null]
 }
 

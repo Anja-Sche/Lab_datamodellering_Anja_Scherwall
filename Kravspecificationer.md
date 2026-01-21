@@ -17,7 +17,7 @@ YrkesCo har identifierat att de vill ha en databas som har information:
 
 - kurser med namn, kurskod, antal poäng, kort beskrivning av kursen
 
-- program har ett antal kurser knutna till sig
+- en klass har ett antal kurser knutna till sig
 
 - ett program blir beviljat i tre omgångar, dvs att det finns 3 klasser
 
@@ -34,3 +34,5 @@ expandera till flera orter
 - fristående kurser är påbyggnadskurser, dessa finns inte med i program. 
 
 - man kan vara skriven på EN fristående kurs.
+
+- kurser med samma namn kan ha olika poäng mellan klasserna

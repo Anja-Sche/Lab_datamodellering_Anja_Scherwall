@@ -11,10 +11,12 @@ Alla värden i en kolumn måste ha samma datatyp e.g. INTEGER för siffa.
 
 Alla rader måste vara unika.
 
+<div style="margin-bottom: 2em;"></div>
 
 ### Andra normalformen
 Ett non-key attribut (kolumn) måste vara fullt beroende av hela komposit nyckeln. En kompositnyckel är en primärnyckel som består av två eller fler attribut som tillsammans unikt identifierar varje rad.
 
+<div style="margin-bottom: 2em;"></div>
 
 ### Tredje normalformen
 Ett attribut får endast vara peroende av primära nyckeln och endast primära nyckeln. Om det uppstår ett transitivt beroende är ett attribut beroende av primära nyckeln genom ett annat attribut, alltså att attributet är beroende av ett annat non-prime attribut.
