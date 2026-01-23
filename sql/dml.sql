@@ -1,10 +1,10 @@
 -- City
-INSERT INTO yrkesco.city (city_name) VALUES
+INSERT INTO city (city_name) VALUES
 ('Stockholm'),
 ('Göteborg');
 
 -- Postcode
-INSERT INTO yrkesco.postcode (postcode, city_id) VALUES
+INSERT INTO postcode (postcode, city_id) VALUES
 (11122, 1),  
 (11123, 1),  
 (12113, 1),  
@@ -16,7 +16,7 @@ INSERT INTO yrkesco.postcode (postcode, city_id) VALUES
 (42111, 2); 
 
 -- Address
-INSERT INTO yrkesco.address (address, postcode) VALUES
+INSERT INTO address (address, postcode) VALUES
 ('Storgatan 1', 11122),    -- YrkesCo Stockholm
 ('Kyrkogatan 5', 11123),   -- Studentbostad Stockholm
 ('Midsommargatan 18', 12113),
@@ -28,19 +28,19 @@ INSERT INTO yrkesco.address (address, postcode) VALUES
 ('Kulgatan 89', 42111);
 
 -- Facility
-INSERT INTO yrkesco.facility (name, address_id) VALUES
+INSERT INTO facility (name, address_id) VALUES
 ('YrkesCo Stockholm Campus', 1),
 ('YrkesCo Göteborg Campus', 6);
 
 -- Program
-INSERT INTO yrkesco.program (program, program_name, points) VALUES
+INSERT INTO program (program, program_name, points) VALUES
 ('ARK', 'Arkitekt', 400),
 ('SYS', 'Systemutvecklare', 400),
 ('SKO', 'Skoproduktion', 200),
 ('KOK', 'Kock', 200);
 
 -- Class - 3 klasser per program, per ort
-INSERT INTO yrkesco.class (program, start_date, facility_id) VALUES
+INSERT INTO class (program, start_date, facility_id) VALUES
 -- ARK program (Stockholm)
 ('ARK', '2024-08-28', 1),  
 ('ARK', '2025-08-26', 1),  
@@ -65,28 +65,28 @@ INSERT INTO yrkesco.class (program, start_date, facility_id) VALUES
 
 
 -- Student
-INSERT INTO yrkesco.student (first_name, last_name, class_id, student_email) VALUES
+INSERT INTO student (first_name, last_name, class_id, student_email) VALUES
 -- ARK studenter
-('Marshall', 'Eriksen', 1, 'marshall.eriksen@stud.yrkesco.se'),
-('Lily', 'Aldrin', 1, 'lily.aldrin@stud.yrkesco.se'),
-('Barney', 'Stinson', 2, 'barney.stinson@stud.yrkesco.se'),
-('Robin', 'Scherbatsky', 2, 'robin.scherbatsky@stud.yrkesco.se'),
+('Marshall', 'Eriksen', 1, 'marshall.eriksen@stud.se'),
+('Lily', 'Aldrin', 1, 'lily.aldrin@stud.se'),
+('Barney', 'Stinson', 2, 'barney.stinson@stud.se'),
+('Robin', 'Scherbatsky', 2, 'robin.scherbatsky@stud.se'),
 -- SYS studenter
-('Sheldon', 'Cooper', 4, 'sheldon.cooper@stud.yrkesco.se'),
-('Leonard', 'Hofstadter', 4, 'leonard.hofstadter@stud.yrkesco.se'),
-('Howard', 'Wolowitz', 5, 'howard.wolowitz@stud.yrkesco.se'),
-('Raj', 'Koothrappali', 7, 'raj.koothrappali@stud.yrkesco.se'),
-('Sylvester', 'Dodd', 8, 'sylvester.dodd@stud.yrkesco.se'),
+('Sheldon', 'Cooper', 4, 'sheldon.cooper@stud.se'),
+('Leonard', 'Hofstadter', 4, 'leonard.hofstadter@stud.se'),
+('Howard', 'Wolowitz', 5, 'howard.wolowitz@stud.se'),
+('Raj', 'Koothrappali', 7, 'raj.koothrappali@stud.se'),
+('Sylvester', 'Dodd', 8, 'sylvester.dodd@stud.se'),
 -- SKO studenter
-('Carrie', 'Bradshaw', 10, 'carrie.bradshaw@stud.yrkesco.se'),
-('Samantha', 'Jones', 10, 'samantha.jones@stud.yrkesco.se'),
-('Kajsa', 'Anka', 11, 'kajsa.anka@stud.yrkesco.se'),
+('Carrie', 'Bradshaw', 10, 'carrie.bradshaw@stud.se'),
+('Samantha', 'Jones', 10, 'samantha.jones@stud.se'),
+('Kajsa', 'Anka', 11, 'kajsa.anka@stud.se'),
 -- KOK studenter
-('Musse', 'Pigg', 13, 'musse.pigg@stud.yrkesco.se'),
-('Kalle', 'Anka', 14, 'kalle.anka@stud.yrkesco.se');
+('Musse', 'Pigg', 13, 'musse.pigg@stud.se'),
+('Kalle', 'Anka', 14, 'kalle.anka@stud.se');
 
 -- Student info
-INSERT INTO yrkesco.student_info (student_id, email, phone_nr, address_id, social_security) VALUES
+INSERT INTO student_info (student_id, email, phone_nr, address_id, social_security) VALUES
 (1,'marshall@gmail.com', '070-1111111', 2, '198001011111'),
 (2,'lily@gmail.com', '070-2222222', 2, '198002022222'),
 (3,'barney@awesome.com', '070-3333333', 2, '198003033333'),
@@ -103,13 +103,13 @@ INSERT INTO yrkesco.student_info (student_id, email, phone_nr, address_id, socia
 (14,'kalle@gmail.com', '070-1313131', 7, '197205271212');
 
 -- Program Manager
-INSERT INTO yrkesco.program_manager (first_name, last_name, work_email) VALUES
-('Leslie', 'Knope', 'leslie.knope@yrkesco.se'),      
-('Ron', 'Swanson', 'ron.swanson@yrkesco.se'),        
-('Michael', 'Scott', 'michael.scott@yrkesco.se'); 
+INSERT INTO program_manager (first_name, last_name, work_email) VALUES
+('Leslie', 'Knope', 'leslie.knope@se'),      
+('Ron', 'Swanson', 'ron.swanson@se'),        
+('Michael', 'Scott', 'michael.scott@se'); 
 
 -- Program-Facility relation
-INSERT INTO yrkesco.program_facility (program, prog_manager_id, facility_id) VALUES
+INSERT INTO program_facility (program, prog_manager_id, facility_id) VALUES
 -- Leslie Knope hanterar ARK och SKO i Stockholm
 ('ARK', 1, 1),
 ('SKO', 1, 1),
@@ -120,14 +120,14 @@ INSERT INTO yrkesco.program_facility (program, prog_manager_id, facility_id) VAL
 ('KOK', 3, 2);
 
 -- Permanent Educator
-INSERT INTO yrkesco.permanent_educator (first_name, last_name, work_email) VALUES
-('Ted', 'Mosby', 'ted.mosby@yrkesco.se'),
-('Phoebe', 'Buffay', 'phoebe.buffay@yrkesco.se'),
-('Monica', 'Geller', 'monica.geller@yrkesco.se'),
-('Walter', 'White', 'walter.white@yrkesco.se'); 
+INSERT INTO permanent_educator (first_name, last_name, work_email) VALUES
+('Ted', 'Mosby', 'ted.mosby@se'),
+('Phoebe', 'Buffay', 'phoebe.buffay@se'),
+('Monica', 'Geller', 'monica.geller@se'),
+('Walter', 'White', 'walter.white@se'); 
 
 -- Permanent Employee Info
-INSERT INTO yrkesco.permanent_employ_info (permanent_ed_id, prog_manager_id, email, phone_nr, address_id, social_security, salary, employment_date) VALUES
+INSERT INTO permanent_employ_info (permanent_ed_id, prog_manager_id, email, phone_nr, address_id, social_security, salary, employment_date) VALUES
 (1, NULL, 'ted.mosby@gmail.com', '070-1414141', 5, '197804251313', 45000.00, '2018-01-15'),
 (2, NULL, 'phoebe.buffay@gmail.com', '070-1515151', 3, '196802161414', 42000.00, '2019-03-01'),
 (3, NULL, 'monica.geller@gmail.com', '070-1616161', 9, '196904221515', 48000.00, '2017-08-20'),
@@ -137,24 +137,24 @@ INSERT INTO yrkesco.permanent_employ_info (permanent_ed_id, prog_manager_id, ema
 (NULL, 3, 'Michael.Scott@gmail.com', '072-1678175', 8, '195809072676', 60000.00, '2021-03-18');
 
 -- Consulting Company
-INSERT INTO yrkesco.consulting_company (organization_nr, company, f_tax, address_id) VALUES
+INSERT INTO consulting_company (organization_nr, company, f_tax, address_id) VALUES
 ('5566778899', 'Dunder Mifflin Consulting', TRUE, 1),
 ('1122334455', 'Stark Industries AB', TRUE, 3);
 
 -- Consultant
-INSERT INTO yrkesco.consultant (organization_nr, first_name, last_name, work_email) VALUES
-('5566778899', 'Jim', 'Halpert', 'jim.halpert@yrkesco.se'),
-('5566778899', 'Pam', 'Beesly', 'pam.beesly@yrkesco.se'),
-('1122334455', 'Tony', 'Stark', 'tony.stark@yrkesco.se');
+INSERT INTO consultant (organization_nr, first_name, last_name, work_email) VALUES
+('5566778899', 'Jim', 'Halpert', 'jim.halpert@se'),
+('5566778899', 'Pam', 'Beesly', 'pam.beesly@se'),
+('1122334455', 'Tony', 'Stark', 'tony.stark@se');
 
 -- Consultant Info
-INSERT INTO yrkesco.consultant_info (consultant_id, email, phone_nr, address_id, social_security, hourly_fee, employment_date) VALUES
+INSERT INTO consultant_info (consultant_id, email, phone_nr, address_id, social_security, hourly_fee, employment_date) VALUES
 (1,'jim.halpert@gmail.com', '070-1818181', 1, '197810011717', 850.00, '2022-02-01'),
 (2,'pam.beesly@gmail.com', '070-1919191', 1, '197903251818', 800.00, '2022-02-01'),
 (3,'tony.stark@stark.com', '070-2020202', 3, '197005291919', 1500.00, '2023-01-15');
 
 -- Educator
-INSERT INTO yrkesco.educator (permanent_ed_id, prog_manager_id, consultant_id) VALUES
+INSERT INTO educator (permanent_ed_id, prog_manager_id, consultant_id) VALUES
 --(endast permanent)
 (1, NULL, NULL),  
 (2, NULL, NULL),  
@@ -165,8 +165,8 @@ INSERT INTO yrkesco.educator (permanent_ed_id, prog_manager_id, consultant_id) V
 (NULL, NULL, 2),  
 (NULL, NULL, 3);  
 
--- Kurser (Courses) - med olika namn/poäng för olika årgångar
-INSERT INTO yrkesco.course (course_code, name, points, freestanding, description) VALUES
+-- Courses 
+INSERT INTO course (course_code, name, points, freestanding, description) VALUES
 -- ARK kurser
 ('ARK101', 'Basarkitektur med Ted Mosby', 45.0, FALSE, 'Lär dig att designa byggnader och berätta långa historier om ditt förflutna'),
 ('ARK102', 'Modernistisk design', 30.0, FALSE, 'För dig som vill bygga hus som ser ut som glaslådor'),
@@ -190,7 +190,7 @@ INSERT INTO yrkesco.course (course_code, name, points, freestanding, description
 ('FRE201', 'Sociala medier för yrkesverksamma', 10.0, TRUE, 'Mer än bara kattbilder på Instagram');
 
 -- Educator-Course relation
-INSERT INTO yrkesco.educator_course (educator_id, course_code) VALUES
+INSERT INTO educator_course (educator_id, course_code) VALUES
 (1, 'ARK101'), 
 (1, 'ARK102'), 
 (1, 'ARK201'),
@@ -204,8 +204,8 @@ INSERT INTO yrkesco.educator_course (educator_id, course_code) VALUES
 (6, 'SKO102'),
 (7, 'SYS301');
 
--- Course-Class relation (olika kurser för olika årgångar)
-INSERT INTO yrkesco.course_class (course_code, class_id) VALUES
+-- Course-Class relation 
+INSERT INTO course_class (course_code, class_id) VALUES
 ('ARK101', 1), 
 ('ARK102', 1), 
 ('ARK201', 1),
