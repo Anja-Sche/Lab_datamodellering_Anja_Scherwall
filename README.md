@@ -34,3 +34,19 @@ Se även: [Kod fysisk modell](modeller/fysisk_modell.dbml)
 Denna databas uppnår kraven för tredje normalformen som efterfrågats. Alla attribut i entitterna är beroende av den primära nyckeln, De har unika namn inom entiteterna och upprepar inte information i onödan. 
 
 Läs mer om normalformer och hur denna databas uppfyller dessa krav här: [Normalformer](Normalformer.md)
+
+## SQL kod och querys
+För dig som är intresserad över koden som skapade tabellerna, fyllde på information och tester kan du hitta dessa genom länkarna nedan.
+
+- [DDL(Data Defenition Language), skapa tabelelrna](sql/ddl.sql)
+
+- [DML(Data Manipulation Language), fylla information i tabellerna](sql/dml.sql)
+
+- [JOIN querys, ta fram vald information från olika tabeller](sql/join_query.sql)
+
+- [Insert Demo, lägga till ny information i tabellerna](sql/insert_demo.sql)
+
+- Exempel på INSERTS som inte fungerar [DML fail 1](sql/dml_fail_1.sql), [DML fail 1](sql/dml_fail_2.sql), [DML fail 1](sql/dml_fail_3.sql)
+
+## Klona repository
+Det går jättebra att klona och testa koden. [Här finns instruktioner hur du gör](information/klona_repo.md)
