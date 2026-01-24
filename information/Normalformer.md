@@ -25,4 +25,4 @@ Ett attribut får endast vara peroende av primära nyckeln och endast primära n
 
 
 ## Uppfyller databasen för YrkesCo dessa krav?
-Ja, databasen uppfyller kraven för alla tre Normalformen. Detta då alla attribut i entitterna är beroende av den primära nyckeln. De har unika namn inom entiteterna och upprepar inte information i onödan. Om en viss information e.g. anläggning för klasser, så har dessa fått unika id:n så att man endast behöver ändra anläggningens namn på ett ställe istället för att ändra det för varje klass på den anläggningen. 
+Ja, databasen uppfyller kraven för alla tre Normalformer. Detta då alla attribut i entitterna är beroende av den primära nyckeln. De har unika namn inom entiteterna och upprepar inte information i onödan. Om en viss information ändras e.g. en utbildare byter namn, så har den fått ett unik id så att man endast behöver ändra namn på ett ställe istället för att ändra namnet för varje kurs som utbildaren undervisar. 

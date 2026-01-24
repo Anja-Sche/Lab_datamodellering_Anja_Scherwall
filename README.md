@@ -7,15 +7,15 @@ För att skapa en bra databas behöver man en stabil bas som börjar med informa
 ## Modeller
 
 ### Konseptuell modell
-Entiteter an vara t.ex. ett objekt, en person eller en plats. Den koseptuella modellen ska ha med de entiteter som är relevanta för databasen och vara enkel att förstå. När dessa är framtagna ska de kopplas samman med hjälp av ralationer och ERD (entity-relationship diagram). I diagrammet använder man kardinalitet för att visa förhållandet mellan entiteterna, hur många instanser av ena som kan relateras till instanser av den andra.
+Entiteter kan vara t.ex. ett objekt, en person eller en plats. Den koseptuella modellen ska ha med de entiteter som är relevanta för databasen och vara enkel att förstå. När dessa är framtagna ska de kopplas samman med hjälp av ralationer och ERD (entity-relationship diagram). I diagrammet använder man kardinalitet för att visa förhållandet mellan entiteterna, hur många instanser av ena som kan relateras till instanser av den andra.
 
 Här kan du se de konseptuella modellerna för YrkesCO: [Konseptuell modell](modeller/konseptuell_modell.md)
 
 
 ### Logisk modell
-När den första modellen har en stark grund och beställaren har godkänt den kan man gå vidare till den logiska modellen. Denna kommer utvecklas med fler entiteter, attribut och relationer för att få fram mer information som ska finnas i databasen. 
+När den första modellen har en stark grund och beställaren har godkänt kan man gå vidare till den logiska modellen. Denna kommer utvecklas med fler entiteter, attribut och relationer för att få fram mer information som ska finnas i databasen. 
 
-Attribut för entiteten Student kan vara namn och klass, sådan information som är kopplad till den entiteten. Här lägger man också till primära nycklar och främmande nycklar. De används för att koppla ihop olika entiteter och gör det enklare att minska ner antalet rade i datan som kommer ligga i databasen. Man ger också en hint på vilken datatyp varje attribut ska vara.
+Attribut för entiteten Student kan vara namn och klass_id, sådan information som är kopplad till den entiteten. Här lägger man också till primära nycklar och främmande nycklar. De används för att koppla ihop olika entiteter och gör det enklare att minska ner antalet rade i datan som kommer ligga i databasen. Man ger också en hint på vilken datatyp varje attribut ska vara.
 
 Här kan du se de logiska modellerna för YrkesCO: [Logisk modell](modeller/logisk_modell.md)
 

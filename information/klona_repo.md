@@ -19,7 +19,7 @@ POSTGRES_DB="YrkesCo_db"
 POSTGRES_PORT=5432
 
 ## Docker och Terminalen 
-För att skapa databasen behöver du först starta Docker och ha programmet igång (logga inte in). 
+För att skapa databasen behöver du först installera och starta Docker och ha programmet igång (logga inte in). 
 
 Skriv följande i terminalen:
 
