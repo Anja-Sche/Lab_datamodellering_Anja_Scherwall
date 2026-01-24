@@ -19,6 +19,8 @@ INSERT INTO course_class (course_code, class_id) VALUES
 ('SLAP04', 17);
 
 
+
+
 -- Ny utbildningsledare och fast utbildare
 
 INSERT INTO postcode (postcode, city) VALUES
@@ -44,6 +46,5 @@ INSERT INTO educator (permanent_ed_id, prog_manager_id, consultant_id) VALUES
 (NULL, 4, NULL), 
 (5, NULL, NULL);
 
-
--- Senare kan man koppla till vilka kurser utbildaren och program utbildningsledaren har (de ovanför?)
--- Vid ny stad lägger man informationen under city
+INSERT INTO program_facility (program, prog_manager_id, facility_id) VALUES
+('SKMT', 4, 2);

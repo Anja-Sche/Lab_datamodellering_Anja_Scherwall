@@ -1,5 +1,5 @@
 
--- Går inte då vi inte lagt till antingen kurs eller klass ännu.
+-- Går inte då vi inte lagt till kurs eller klass ännu.
 
 INSERT INTO course_class (course_code, class_id) VALUES
 ('SKMT01', 17), 

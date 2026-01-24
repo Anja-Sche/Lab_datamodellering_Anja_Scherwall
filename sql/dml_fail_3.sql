@@ -1,5 +1,5 @@
 -- Bryter mot NOT NULL
 
 INSERT INTO postcode (postcode) VALUES
-(41723),
-(12365);
+(32427),
+(15378);
