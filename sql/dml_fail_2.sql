@@ -6,4 +6,4 @@ INSERT INTO program (program, program_name, points) VALUES
 INSERT INTO class (program, start_date,facility_id) VALUES
 ('SKMT', '2026-08-26', 2),
 ('SKMT', '2027-08-20', 2),
-('SKMT', '2026-09-02', 2);
+('SKMT', '2028-09-02', 2);

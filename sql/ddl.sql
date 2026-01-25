@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS
         email VARCHAR(255) NOT NULL,
         phone_nr VARCHAR(15) NOT NULL,
         address_id INTEGER NOT NULL,
-        social_security CHAR(12) NOT NULL
+        social_security VARCHAR(13) NOT NULL
     );
 
 CREATE TABLE IF NOT EXISTS
@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS
         email VARCHAR(255) NOT NULL,
         phone_nr VARCHAR(15) NOT NULL,
         address_id INTEGER NOT NULL,
-        social_security CHAR(12) NOT NULL,
+        social_security VARCHAR(13) NOT NULL,
         salary DECIMAL(10, 2) NOT NULL,
         employment_date DATE NOT NULL
     );
@@ -124,7 +124,7 @@ CREATE TABLE IF NOT EXISTS
         email VARCHAR(255) NOT NULL,
         phone_nr VARCHAR(15) NOT NULL,
         address_id INTEGER NOT NULL,
-        social_security CHAR(12) NOT NULL,
+        social_security VARCHAR(13) NOT NULL,
         hourly_fee DECIMAL(8, 2) NOT NULL,
         employment_date DATE NOT NULL
     );

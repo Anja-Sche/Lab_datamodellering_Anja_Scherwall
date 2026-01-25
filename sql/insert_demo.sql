@@ -6,12 +6,12 @@ INSERT INTO program (program, program_name, points) VALUES
 INSERT INTO class (program, start_date,facility_id) VALUES
 ('SKMT', '2026-08-26', 2),
 ('SKMT', '2027-08-20', 2),
-('SKMT', '2026-09-02', 2);
+('SKMT', '2028-09-02', 2);
 
-INSERT INTO course(course_code, name, points, description)
-('SKMT01', 'Skämtets Mekanik: Grundkurs', 30, 'Lär dig bygga upp ett skämt från observation till punchline. Inkluderar övningar i överdrift, underdrift och timing'),
-('SARK03', 'Sarkasm & Torr Humor', 20, 'En studie i den kärva konsten. Hur man levererar perfekt kalibrerade kommentarer och tolkar omvärldens brist på humor.'),
-('SLAP04', 'Slapstick & Fysisk Komik', 20, 'Praktisk kurs i pratfalls, mim och kroppsspråk som får andra att skratta. Rekommenderar skyddsutrustning.');
+INSERT INTO course (course_code, name, points, description) VALUES
+('SKMT01', 'Skämtets Mekanik: Grundkurs', 30.0, 'Lär dig bygga upp ett skämt från observation till punchline. Inkluderar övningar i överdrift, underdrift och timing'),
+('SARK03', 'Sarkasm & Torr Humor', 20.0, 'En studie i den kärva konsten. Hur man levererar perfekt kalibrerade kommentarer och tolkar omvärldens brist på humor.'),
+('SLAP04', 'Slapstick & Fysisk Komik', 20.0, 'Praktisk kurs i pratfalls, mim och kroppsspråk som får andra att skratta. Rekommenderar skyddsutrustning.');
 
 INSERT INTO course_class (course_code, class_id) VALUES
 ('SKMT01', 17), 
@@ -23,7 +23,7 @@ INSERT INTO course_class (course_code, class_id) VALUES
 
 -- Ny utbildningsledare och fast utbildare
 
-INSERT INTO postcode (postcode, city) VALUES
+INSERT INTO postcode (postcode, city_id) VALUES
 (41723, 2),
 (12365, 1);
 
