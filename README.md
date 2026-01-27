@@ -50,3 +50,7 @@ För dig som är intresserad över koden som skapade tabellerna, fyllde på info
 
 ## Klona repository
 Det går jättebra att klona och testa koden. [Här finns instruktioner hur du gör](information/klona_repo.md)
+
+# YrkseCo databas presentation
+
+[Klicka här för att se presentationsvideo](https://youtu.be/lmHHZgSNITg) 
